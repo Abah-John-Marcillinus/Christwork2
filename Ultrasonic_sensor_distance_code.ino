@@ -23,4 +23,15 @@ void loop(){
   Serial.print(distance); // this is actual distance
   Serial.println("CM");
   
+  if(distance<15){
+    digitalWrite(red_led, HIGH);
+    digitalWrite(red_led, LOW);
+    Serial.println("Danger");
+  }
+  else{
+   digitalWrite(red_led, HIGH);
+    digitalWrite(red_led, LOW);
+    Serial.println("Safe"); 
+  }
+  
 }
